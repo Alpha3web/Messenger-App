@@ -1,0 +1,34 @@
+<%- include("partials/header"); %>
+    <%- include("partials/navbar"); %>
+    <div class="container">
+        <h1>Write a message</h1>
+
+        <form action="/compose" method="post">
+            <div class="card">
+                <label for="reciever">
+                    To
+                </label>
+                <input type="text" name="reciever" placeholder="Enter reciever username" id="reciever">
+            </div>
+
+            <div class="card">
+                <label for="subject">
+                    Subject
+                </label>
+                <input type="text" name="subject" placeholder="message subject" id="subject">
+            </div>
+    
+            <div class="card">
+                <label for="content">
+                    Compose
+                </label>
+                <textarea name="content" id="content" cols="39" rows="5" placeholder="Write your message here."></textarea>
+                </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+
+<%- include("partials/footer"); %>

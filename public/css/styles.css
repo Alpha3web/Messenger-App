@@ -1,0 +1,302 @@
+body {
+    display: grid;
+    background-color: #FFB5DA;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+nav {
+  display: flex;
+  grid-column: span 12;
+  justify-content: space-between;
+  margin: 5px 8px;
+  padding: 3px;
+}
+
+nav img[alt="logo"]{
+  width: 30px;
+  margin: auto 10px;
+}
+
+nav img[alt="profile-img"]{
+  width: 28px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.center-text{
+  display: inline-flex;
+  align-items: center;
+  
+}
+
+.center-text h1, .center-text p{
+  margin: 0;
+}
+
+nav form{
+  width: 40%;
+}
+
+nav input{
+  width: 100%;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.container {
+    margin: 100px auto;
+    text-align: center;
+    grid-column: 4 / span 6;
+}
+
+a{
+  text-decoration: none;
+}
+
+a[role="button"]{
+  padding: 8px 20px;
+  font-size: 1.25rem;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+img[alt="polyhydra-icon"]{
+  width: 80px;
+}
+
+.welcome-text{
+  font-size: 18px;
+  padding: 2px;
+  margin-bottom: 15px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.blue-btn {
+  background-color: #6420AA;
+  /* background-color: rgb(100, 100, 146); */
+  color: white;
+}
+.light-btn {
+  background-color: white;
+  color: #6420AA;
+}
+
+input{
+  height: 30px;
+  width: 300px;
+
+}
+
+label{
+    /* font-weight: bolder; */
+    display: block;
+    text-align: start;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.signup{
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 50px auto 0px auto;
+}
+
+.signup p{
+  text-align: start;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+button[type="submit"]{
+  width: 95%;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 3px;
+  font-size: 1.15rem;
+  border-color: transparent;
+
+}
+.social{
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+#google{
+  background-color: blue;
+}
+
+#facebook{
+  background-color: red;
+}
+
+#twitter{
+  background-color: palevioletred;
+}
+
+.social a {
+  color: white;
+}
+
+.box {
+  margin-top: 20px;
+  grid-column: 2 / span 10;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(10, 1.2fr);
+  height: 80vh;
+  /* row-gap: 2rem; */
+}
+
+.box > *:not(.component-bar ){
+  grid-row: span 9;
+}
+
+.box > * {
+  background-color: #f0e7eb;
+  padding: 8px 10px;
+}
+
+.component-bar{
+  grid-column: span 2;
+  background-color: #f4f3f4;
+  box-shadow: 0px 4px 4px 0px #bb7197;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+}
+
+.component-bar > * {
+  margin: 1px 5px;
+  padding: 8px 18px;
+}
+
+.component-bar > *:hover{
+  background-color: #f0e7eb;
+}
+
+.messages {
+  position: relative;
+}
+
+.messages > p {
+  text-align: center;
+  margin: 3px auto;
+}
+
+.message{
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  padding-top: 2px;
+}
+
+
+.message img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.message p{
+  margin: 3px auto;
+  padding: auto 2px;
+}
+
+.message span{
+  float: right;
+  margin-right: 1px;
+  /* background-color: rgb(193, 175, 175); */
+  /* opacity: 50%; */
+}
+
+.message > div{
+  /* margin: 2px; */
+  padding: 2px;
+  width: 95%;
+}
+
+.wrapper{
+  display: inline-block;
+}
+
+.wrapper p{
+  margin: 0;
+}
+
+.message-info > *{
+  margin: 4px auto;
+  font-size: 13px;
+  font-weight: light;
+}
+
+.message-info{
+  padding: 5px 8px;
+}
+
+.call-to-action{
+  text-align: center;
+}
+
+.call-to-action > *{
+  margin: 20px;
+}
+
+.hidden{
+  display: none;
+  /* opacity: 0; */
+}
+
+.messages, .message-display-panel{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+i {
+  background-color: blueviolet;
+  z-index: 1;
+  position: sticky;
+  bottom: 5px;
+  float: right;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+i > p {
+  color: white;
+  margin: 10px;
+}
+
+.rel{
+  position: relative;
+}
+
+.cont{
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  z-index: 1;
+  padding: 5px 10px;
+}
+
+.cont > * {
+  display: block;
+  padding: 3px;
+}
+
+menu{
+  list-style: none;
+  background-color: white;
+  position: absolute;
+}

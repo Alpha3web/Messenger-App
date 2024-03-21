@@ -1,0 +1,55 @@
+<%- include("partials/header"); %>
+    <%- include("partials/navbar"); %>
+
+    <div class="box">
+        <div class="component-bar">
+            <a href="/inbox">Inbox</a>
+            <a href="/outbox">Outbox</a>
+            <a href="/compose">Compose</a>
+            <a href="/archive" >Archive</a>
+            <a href="/starred">Starred messages</a>
+        </div>
+        <div class="messages" id="outbox">
+            <p><b>Outbox messages</b></p>
+            <% outboxMessages.forEach(message => { %>
+                <!-- <a href="/inbox/<%= message.id %>"> -->
+                <div class="message" id="<%= message.id %>">
+                    <img src="/images/polyhydra-icon.jpg" alt="">
+                    <div>
+                        <p><b> <%= message.reciever %></b> <span><%= message.messageTime %></span></p>
+                        <p><%= message.subject.substring(0, 35) %> </p>
+                        <p><%= message.content.substring(0, 35) %> </p>
+                    </div>
+                </div>
+                <!-- </a> -->
+            <% }) %> 
+            <i><p>Compose</p></i>
+        </div>
+
+        <div class="message-display-panel">
+            <details class="wrapper hidden">
+                <summary>Show</summary>
+                <div class="message-info">
+                    <p id="sender">from: email@mail.com</p>
+                    <p id="reciever">to: myMail@mail.com</p>
+                    <p id="time">time: 11:--am</p>
+                </div>
+            </details>
+
+            <div class="massage-content">
+                <p>
+                    Click a mail to display content.
+                </p>
+            </div>
+
+            <div class="call-to-action hidden">
+                <a href="/reply">Reply</a>
+                <a href="/replyall">Reply All</a>
+                <a href="/archive">Archive</a>
+                <a href="/star">Star</a>
+            </div>
+        </div>
+    </div>
+
+
+<%- include("partials/footer"); %>

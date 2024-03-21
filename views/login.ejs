@@ -1,0 +1,42 @@
+<%- include("partials/header"); %>
+    <div class="container signup">
+        <h1>Login</h1>
+
+        <form action="/login" method="post">
+            <div class="card">
+                <label for="username">
+                    Username
+                </label>
+                <input type="text" name="username" placeholder="Enter username" id="username">
+            </div>
+    
+            <div class="card">
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" name="password" placeholder="Enter password" id="password">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Signup</a></p>
+        <hr> 
+        <p>Login with third party.</p>
+        <div class="card social" id="google">
+            <i></i>
+            <a href="/auth/google">Google</a>
+        </div>
+
+        <div class="card social" id="facebook">
+            <i></i>
+            <a href="/auth/facebook">Facebook</a>
+        </div>
+        <div class="card social" id="twitter">
+            <i></i>
+            <a href="/auth/twitter">Twitter</a>
+        </div>
+    </div>
+
+
+
+
+<%- include("partials/footer"); %>
